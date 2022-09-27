@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.status(200).send("Working");
 });
 async function dbConnect() {
-  await mongoose.connect(process.env.MONGODB);
+  await mongoose.connect(process.env.MONGOCLOUD);
   console.log("db is connected");
 }
 dbConnect().catch((err) => console.log(err));
